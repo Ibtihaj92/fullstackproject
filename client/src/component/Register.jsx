@@ -69,7 +69,7 @@ function Register() {
     setMsg("");
 
     try {
-      await axios.post("http://localhost:5000/register", {
+      await axios.post("https://fullstackserver-xv5j.onrender.com//register", {
         userName: data.userName,
         userEmail: data.email,     
         userPassword: data.password,
