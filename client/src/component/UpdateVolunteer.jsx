@@ -63,7 +63,7 @@ function UpdateVolunteer() {
         imageUrl = await uploadToCloudinary(imageFile);
       }
 
-      await axios.put(`http://localhost:5000/updateEvent/${volunteerData._id}`, {
+      await axios.put(`https://fullstackserver-xv5j.onrender.com/updateEvent/${volunteerData._id}`, {
         volunteerName,
         date,
         time,
