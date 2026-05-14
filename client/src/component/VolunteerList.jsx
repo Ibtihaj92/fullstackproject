@@ -9,7 +9,7 @@ export default function VolunteerList() {
   const [volunteers, setVolunteers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allEvents")
+    axios.get("https://fullstackserver-xv5j.onrender.com")
       .then(res => setVolunteers(res.data))
       .catch(err => console.log(err));
   }, []);
