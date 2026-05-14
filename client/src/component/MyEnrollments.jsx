@@ -20,8 +20,8 @@ function MyEnrollments() {
 
     // Fetch both enrollments and all events in parallel
     Promise.all([
-      axios.get(`https://fullstackserver-xv5j.onrender.com//api/enrollments/my-enrollments/${currentUserId}`),
-      axios.get("https://fullstackserver-xv5j.onrender.com//allEvents"),
+      axios.get(`https://fullstackserver-xv5j.onrender.com/api/enrollments/my-enrollments/${currentUserId}`),
+      axios.get("https://fullstackserver-xv5j.onrender.com/allEvents"),
     ])
       .then(([enrollRes, eventRes]) => {
         setEnrollments(enrollRes.data);
