@@ -99,7 +99,7 @@ function AdminDashboard() {
 
     const fetchVolunteers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/allEvents");
+        const res = await axios.get("https://fullstackserver-xv5j.onrender.com//allEvents");
         const events = res.data;
 
         const today = new Date().toISOString().split("T")[0];
