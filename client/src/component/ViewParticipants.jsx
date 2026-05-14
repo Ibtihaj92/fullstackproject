@@ -13,7 +13,7 @@ export default function ViewParticipants() {
   const [attendance, setAttendance] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/enrollments/event/${id}`)
+    axios.get(`https://fullstackserver-xv5j.onrender.com/api/enrollments/event/${id}`)
       .then(res => {
         setParticipants(res.data);
         const initial = {};
@@ -29,7 +29,7 @@ export default function ViewParticipants() {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/enrollments/attendance/${id}`, { attendance });
+      await axios.put(`https://fullstackserver-xv5j.onrender.com/api/enrollments/attendance/${id}`, { attendance });
       alert("Attendance saved!");
     } catch (err) {
       console.error(err);
