@@ -45,8 +45,8 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        userEmail: email, // إرسال الإيميل للسيرفر
+      const response = await axios.post("https://fullstackserver-xv5j.onrender.com//login", {
+        userEmail: email, 
         userPassword: password,
       });
 
@@ -55,13 +55,13 @@ function Login() {
 
         const user = response.data.user;
 
-        // تخزين بيانات المستخدم في localStorage
+        
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("userId", response.data.userId);
         localStorage.setItem("role", response.data.role);
         localStorage.setItem("userName", response.data.userName || "");
 
-        // تحويل حسب نوع المستخدم
+      
         if (response.data.role === "admin") {
           navigate("/admin");
         } else {
