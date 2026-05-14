@@ -20,7 +20,7 @@ function EventsPage() {
     }
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/allEvents");
+        const response = await axios.get("https://fullstackserver-xv5j.onrender.com//allEvents");
         setEvents(response.data);
       } catch (error) {
         console.error("Error fetching events:", error);
