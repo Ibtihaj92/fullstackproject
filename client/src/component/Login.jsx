@@ -45,7 +45,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://fullstackserver-xv5j.onrender.com//login", {
+      const response = await axios.post("https://fullstackserver-xv5j.onrender.com/login", {
         userEmail: email, 
         userPassword: password,
       });
