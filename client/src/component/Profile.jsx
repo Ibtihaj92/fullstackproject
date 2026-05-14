@@ -22,7 +22,7 @@ function Profile() {
 
   useEffect(() => {
     if (!userId) { navigate("/"); return; }
-    axios.get(`http://localhost:5000/users/${userId}`)
+    axios.get(`https://fullstackserver-xv5j.onrender.com//users/${userId}`)
       .then(res => {
         setUser(res.data);
         setForm({
@@ -61,7 +61,7 @@ function Profile() {
       if (imageFile) {
         profileImage = await uploadToCloudinary(imageFile);
       }
-      const res = await axios.put(`http://localhost:5000/users/${userId}`, {
+      const res = await axios.put(`https://fullstackserver-xv5j.onrender.com//users/${userId}`, {
         ...form,
         profileImage,
       });
