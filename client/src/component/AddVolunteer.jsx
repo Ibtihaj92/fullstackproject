@@ -49,7 +49,7 @@ function AddVolunteer() {
         imageUrl = await uploadToCloudinary(imageFile);
       }
 
-      const res = await axios.post("http://localhost:5000/addEvent", {
+      const res = await axios.post("https://fullstackserver-xv5j.onrender.com//addEvent", {
         volunteerName,
         date,
         time,
