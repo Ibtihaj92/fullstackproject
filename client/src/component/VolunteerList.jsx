@@ -9,7 +9,7 @@ export default function VolunteerList() {
   const [volunteers, setVolunteers] = useState([]);
 
   useEffect(() => {
-    axios.get("https://fullstackserver-xv5j.onrender.com")
+    axios.get("https://fullstackserver-xv5j.onrender.com/allEvents")
       .then(res => setVolunteers(res.data))
       .catch(err => console.log(err));
   }, []);
@@ -52,7 +52,7 @@ export default function VolunteerList() {
               <button
                 className="delete-btn"
                 onClick={() =>
-                  axios.delete(`http://localhost:5000/deleteEvent/${volunteer._id}`)
+                  axios.delete(`https://fullstackserver-xv5j.onrender.com/deleteEvent/${volunteer._id}`)
                     .then(() => setVolunteers(prev => prev.filter(v => v._id !== volunteer._id)))
                 }
               >
