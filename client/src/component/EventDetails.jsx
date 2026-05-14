@@ -10,7 +10,7 @@ export default function EventDetails() {
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://fullstackserver-xv5j.onrender.com//events/${id}`)
+    axios.get(`https://fullstackserver-xv5j.onrender.com/events/${id}`)
       .then((res) => setEvent(res.data))
       .catch((err) => console.error(err));
   }, [id]);
@@ -36,7 +36,7 @@ export default function EventDetails() {
     }
 
     try {
-      await axios.post("https://fullstackserver-xv5j.onrender.com//api/enrollments", {
+      await axios.post("https://fullstackserver-xv5j.onrender.com/api/enrollments", {
         userId,
         eventId: event._id,
         title: event.volunteerName,
